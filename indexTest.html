@@ -5,7 +5,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script> 
+
+
+	<link rel="stylesheet" type="text/css" href="fullpage.css" />
+	<script type="text/javascript" src="fullpage.js"></script>
+
+
+	<script>
+		$(document).ready(function() {
+    		$('#fullpage').fullpage();
+		});
 		$(document).ready(function(){
   			$("#aboutMe").click(function(){
     			$("#aboutMeContent").slideToggle("slow");
@@ -21,7 +30,7 @@
     			$("#mee").fadeToggle(150);
   			});
 		});
-</script>
+	</script>
 	<style type="text/css">
 		@font-face
 		{
@@ -33,19 +42,13 @@
 			font-family: theBoldFont;
 			src:url("font/bold.woff");
 		}
-		html
-		{
-
-		}
 		body
 		{
 			font-family: theRegFont;
-		
 			color: rgba(255,255,255,.7);
 			font-size: 18px;
 			min-height:100%;
-  			background:linear-gradient(0deg,rgba(26,26,26,0.92),rgba(26,26,26,0.92
-  				)),url("backgrounds/pattern2.jpg");
+  			background:linear-gradient(0deg,rgba(26,26,26,0.92),rgba(26,26,26,0.92)),url("backgrounds/pattern2.jpg");
   			background-size:cover;
 		}
 		.orange
@@ -66,10 +69,10 @@
 
 </head>
 <body>
-<div class ="container-fluid">
+<div class ="container-fluid fullpage">
 	<div class="row">
-		<div class="col-md-12 orange">
-			<h1 id="me" style="padding:10px;">Anant Singh <span id="mee"> anantSinghCross</span></h1>
+		<div class="col-md-12 orange slide">
+			<h1 id="me" style="padding:8px;">Anant Singh <span id="mee"> anantSinghCross</span></h1>
 		</div>
 	</div>
 	<div class = "row">
@@ -85,5 +88,6 @@
 		</div>	
 	</div>
 </div>
+
 </body>
 </html>
