@@ -5,7 +5,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+	<script> 
+		$(document).ready(function(){
+  			$("#aboutMe").click(function(){
+    			$("#aboutMeContent").slideToggle("slow");
+  			});
+		});
+		$(document).ready(function(){
+  			$("#aboutMeAlso").click(function(){
+    			$("#aboutMeAlsoContent").slideToggle("slow");
+  			});
+		});
+		$(document).ready(function(){
+  			$("#me").click(function(){
+    			$("#mee").fadeToggle(150);
+  			});
+		});
+</script>
 	<style type="text/css">
 		@font-face
 		{
@@ -17,33 +33,56 @@
 			font-family: theBoldFont;
 			src:url("font/bold.woff");
 		}
+		html
+		{
+
+		}
 		body
 		{
 			font-family: theRegFont;
+		
+			color: rgba(255,255,255,.7);
+			font-size: 18px;
+			min-height:100%;
+  			background:linear-gradient(0deg,rgba(26,26,26,0.92),rgba(26,26,26,0.92)),url("backgrounds/pattern2.jpg");
+  			background-size:cover;
 		}
+		.orange
+		{
+			background-color: rgba(255, 102, 0,1);
+		}
+		h1
+		{
+			color: black;
+		}
+		span
+		{
+			font-size: 20px;
+			color: rgba(0,0,0,.5);
+		}
+		
 	</style>
 
 </head>
 <body>
 <div class ="container-fluid">
 	<div class="row">
-		<div class="col-md-12" style="background-color: rgba(0,0,0,.2);">
-			<h1>Anant Singh<small> anantSinghCross</small></h1>
+		<div class="col-md-12 orange">
+			<h1 id="me" style="padding:10px;">Anant Singh <span id="mee"> anantSinghCross</span></h1>
 		</div>
 	</div>
 	<div class = "row">
 		<div class = "col-md-1"></div>
 		<div class = "col-md-10">
-			<h3>About Me</h3>
+			<h3 id="aboutMe" style="color:rgba(255, 102, 0,1)">About Me</h3>
 		</div>	
 	</div>
 	<div class = "row">
 		<div class = "col-md-2"></div>
-		<div class = "col-md-8" style="text-align: justify; border-left: 5px solid; border-color: rgba(0,0,0,.2)">
+		<div id="aboutMeContent" class = "col-md-8" style="text-align: justify; border-left: 5px solid; border-color: rgba(255, 102, 0,.5)">
 			Currently I'm a B.Tech 3<sup>rd</sup> year student at Jaypee Institute of Information Technology, Noida (as of January, 2k19). I am always inclined towards designing and developing things that looked simple, clean and nothing less than an art. To quench my thirst for designing such art, may it be a Game, Website or an Android app, I've dipped my hands in technologies like HTML, Javascript (jQuery), Bootstrap, Android Studio, Java, Unity and several others. I still keep looking for more ways to get inspired to keep myself going.
 		</div>	
 	</div>
-	
 </div>
 </body>
 </html>
