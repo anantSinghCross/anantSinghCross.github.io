@@ -16,13 +16,6 @@
 			$("#wrapper").fullpage();
 		});
 		$(document).ready(function(){
-			for (var i = 0; i < 30; i++) {
-				$("#arrow1").fadeToggle(1500);
-				$("#arrow2").fadeToggle(1500);
-				$("#arrow3").fadeToggle(1500);
-			}
-		});
-		$(document).ready(function(){
   			$("#aboutMe").click(function(){
     			$("#aboutMeContent").slideToggle("slow");
   			});
@@ -35,10 +28,30 @@
 	
 	</script>
 	<style type="text/css">
+		@keyframes bouncing
+		{
+  			0%  { bottom: 0;}
+  			100%{ bottom: 30px;}
+		}
+
+		#scroller
+		{
+			animation: bouncing .7s cubic-bezier(0.1,.25,.1,1) 0s infinite alternate both;
+		}
 		@font-face
 		{
 			font-family: theRegFont;
 			src:url("font/regular.woff");
+		}
+		@font-face
+		{
+			font-family: azonix;
+			src:url("font/azonix.woff");
+		}
+		@font-face
+		{
+			font-family: theNewBoldFont;
+			src:url("font/theboldfont.woff");
 		}
 		@font-face
 		{
@@ -56,7 +69,7 @@
 		}
 		.orange
 		{
-			background-color: rgba(255, 102, 0,.6);
+			background-color: rgba(255, 51, 0,.7);
 		}
 		h1
 		{
@@ -76,11 +89,10 @@
 	<div class="row section">
 		<div class="col-md-12 orange slide">
 			<center>
-			<h1 id="me" onselectstart = "return false" style="padding:8px; color: rgba(255,255,255,1); font-size: 70px;"><b>GLAD TO HAVE YOU HERE!<br></b> <span id="mee" style="border-top: 1px solid; border-bottom: 1px solid;"><b> I'M ANANT !</b></span></h1>
-		<div style="position: absolute; bottom: 20px; left:50%; margin-left: -16px;">
-		<div id="arrow1" class="glyphicon glyphicon-menu-down" style="font-size: 35px"></div><br>
-		<div id="arrow2" class="glyphicon glyphicon-menu-down" style="font-size: 30px"></div><br>
-		<div id="arrow3" class="glyphicon glyphicon-menu-down" style="font-size: 25px"></div>
+			<h1 id="me" onselectstart = "return false" style="font-family: theNewBoldFont; padding:8px; color: rgba(255,255,255,1); font-size: 70px;">GLAD TO HAVE YOU HERE!<br> <span id="mee" style="font-family: azonix;"><b> I'M ANANT</b></span></h1>
+		<div id="scroller" style="position: absolute; bottom: 20px; left:50%; margin-left: -16px;">
+		<div id="arrow2" class="glyphicon glyphicon-menu-down" style="font-size: 25px;"></div><br>
+		<div id="arrow3" class="glyphicon glyphicon-menu-down" style="font-size: 25px;"></div>
 		</div>
 		</center>
 		</div>
@@ -88,9 +100,9 @@
 	<div class = "row section">
 		<div class = "col-md-2"></div>
 		<div class = "col-md-8">
-			<h3 id="aboutMe" style="padding-left: 10px;border-left: 3px solid;border-right: 3px solid; border-color:rgba(255,255,255,.2);  background-color: rgba(255,255,255,.05); color:rgba(255, 102, 0,1); font-size: 40px;">About Me</h3>
+			<h3 id="aboutMe" style="padding-left: 10px;border-left: 5px solid;border-right: 5px solid; border-color:rgba(255,255,255,.2);  background-color: rgba(255,255,255,.05); color:rgba(255, 51, 0,1); font-size: 40px;">About Me</h3>
 			<br>
-			<div style="padding: 10px; text-align: justify; border-left: 5px solid;border-right: 5px solid; border-color: rgba(255, 102, 0,.7);font-size: 20px;">
+			<div style="padding: 10px; text-align: justify; border-left: 5px solid;border-right: 5px solid; border-color: rgba(255, 51, 0,.7);font-size: 20px;">
 			Currently I'm a B.Tech 3<sup>rd</sup> year student at Jaypee Institute of Information Technology, Noida, India (as of January, 2k19). I am always inclined towards designing and developing things that looked simple, clean and nothing less than an art. To quench my thirst for designing such art, may it be a Game, Website or an Android app, I've dipped my hands in technologies like HTML, CSS, Javascript (jQuery), Bootstrap, Android Studio, Java, Unity and several others. I still keep looking for more ways to get inspired to keep myself going.
 			</div>
 		</div>	
