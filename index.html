@@ -33,7 +33,12 @@
   			0%  { bottom: 0;}
   			100%{ bottom: 30px;}
 		}
-
+		@keyframes squeezeBorder
+		{
+			0% {	border-color:rgba(255,255,255,.2);}
+			50% {	border-color:rgba(255, 51, 0,1);}
+			100%{	border-color:rgba(255,255,255,.2);}
+		}
 		#scroller
 		{
 			animation: bouncing .7s cubic-bezier(0.1,.25,.1,1) 0s infinite alternate both;
@@ -79,6 +84,10 @@
 		{
 			font-size: 25px;
 			color: rgba(255,255,255,.5);
+		}
+		#aboutMe
+		{
+			animation: squeezeBorder 2s infinite;
 		}
 		
 	</style>
