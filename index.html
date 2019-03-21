@@ -3,10 +3,10 @@
 <head>
 	<title>About Me</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="fullpage.css" />
 	<script type="text/javascript" src="fullpage.min.js"></script>
 
@@ -39,9 +39,36 @@
 			50% {	border-color:rgba(255, 51, 0,1);}
 			100%{	border-color:rgba(255,255,255,.2);}
 		}
+		@keyframes facebook
+		{
+			0%{right:3%;}
+			100%{right:4%;}
+		}
+		@keyframes insta
+		{
+			0%{right:3%;}
+			100%{right:5%;}
+		}
+		@keyframes github
+		{
+			0%{right:3%;}
+			100%{right:5%;}
+		}
 		#scroller
 		{
 			animation: bouncing .7s cubic-bezier(0.1,.25,.1,1) 0s infinite alternate both;
+		}
+		.mediaAnim1
+		{
+			animation: facebook 1.4s cubic-bezier(0.1,.5,.1,1) 0s infinite alternate both;
+		}
+		.mediaAnim2
+		{
+			animation: insta 1.4s cubic-bezier(0.2,.5,.1,1) 0s infinite alternate both;
+		}
+		.mediaAnim3
+		{
+			animation: github 1.4s cubic-bezier(0.3,.5,.1,1) 0s infinite alternate both;
 		}
 		@font-face
 		{
@@ -92,9 +119,7 @@
 		.elegantShadow
 		{
 			text-shadow: 
-     			 		
-				      
-				      -20px -65px 0px 		rgba(0,0,0,.05),
+				       -20px -65px 0px 		rgba(0,0,0,.05),
 				      30px 65px 0px 		rgba(0,0,0,.05),
 				      -40px -125px 0px 		rgba(0,0,0,.05),
 				      50px 125px 0px 		rgba(0,0,0,.05),
@@ -124,12 +149,24 @@
 <div id="wrapper" class ="container-fluid">
 	<div class="row section">
 		<div class="col-md-12 orange slide">
+			<div style="position: absolute; top: 20px; right:3%; font-size: 45px;">
+			<div >
+				<i class="fab fa-facebook"></i>
+			</div>
+			<div>
+				<i class="fab fa-instagram"></i>
+			</div>
+			<div>
+				<i class="fab fa-github"></i>
+			</div>
+			</div>
 			<center>
-			<h1 class="elegantShadow" id="me"  onselectstart = "return false" style="font-family: theNewBoldFont; padding:8px; color: rgba(255,255,255,1); font-size: 70px;">GLAD TO HAVE YOU HERE!<br></h1> <span id="mee" style="font-family: azonix;"> I'M ANANT</span>
+			<h1 class="elegantShadow" id="me"  onselectstart = "return false" style="font-family: theNewBoldFont; padding:8px; color: rgba(255,255,255,1); font-size: 70px;">GLAD TO HAVE YOU HERE!<br></h1> <span id="mee" style="font-family: azonix;">I'M ANANT</span>
 		<div id="scroller" style="position: absolute; bottom: 20px; left:50%; margin-left: -16px;">
 		<div id="arrow2" class="glyphicon glyphicon-menu-down" style="font-size: 25px;"></div><br>
 		<div id="arrow3" class="glyphicon glyphicon-menu-down" style="font-size: 25px;"></div>
 		</div>
+		
 		</center>
 		</div>
 	</div>

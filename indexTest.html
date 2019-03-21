@@ -1,101 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About Me</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-	<link rel="stylesheet" type="text/css" href="fullpage.css" />
-	<script type="text/javascript" src="fullpage.min.js"></script>
-
-
-	<script>
-		$(document).ready(function(){
-			$("#wrapper").fullpage();
-		});
-		$(document).ready(function(){
-			for (var i = 0; i < 30; i++) {
-				$("#arrow1").fadeToggle(1500);
-				$("#arrow2").fadeToggle(1500);
-				$("#arrow3").fadeToggle(1500);
-			}
-		});
-		$(document).ready(function(){
-  			$("#aboutMe").click(function(){
-    			$("#aboutMeContent").slideToggle("slow");
-  			});
-		});
-		$(document).ready(function(){
-  			$("#aboutMeAlso").click(function(){
-    			$("#aboutMeAlsoContent").slideToggle("slow");
-  			});
-		});
-	
-	</script>
+	<title>Anant's Portfolio</title>
 	<style type="text/css">
 		@font-face
 		{
-			font-family: theRegFont;
-			src:url("font/regular.woff");
+			font-family: theNewBoldFont;
+			src:url("font/theboldfont.woff");
 		}
 		@font-face
 		{
-			font-family: theBoldFont;
-			src:url("font/bold.woff");
+			font-family: elegant;
+			src:url("font/elegant.woff");
 		}
+		html
+		{
+			margin: 0;
+			padding: 0;
+			overflow: scroll;
+			overflow-x: hidden;
+		}
+
 		body
 		{
-			font-family: theRegFont;
-			color: rgba(255,255,255,.7);
-			font-size: 18px;
-			min-height:100%;
-  			background:linear-gradient(0deg,rgba(26,26,26,0.92),rgba(26,26,26,0.92)),url("backgrounds/pattern2.jpg");
-  			background-size:cover;
+			background-color: #20314a;
+			margin:0;
+			padding:0;
 		}
-		.orange
+		.one
 		{
-			background-color: rgba(255, 102, 0,.6);
+			font-family: theNewBoldFont;
+			display: grid;
+			place-items:center;
+			background-color: #f6f6cd;
+			clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw),0 100%);
+			margin-top: -25px;
+			height: 100vh;
 		}
-		h1
+		.two
+		{	color: #f6f6cd;
+			background-color: #20314a;
+			margin-top: -100px;
+			padding-top: 100px;
+			height: 100vh;	
+		}
+		.three
 		{
-			color: black;
+			color: #20314a;
+			clip-path: polygon(0 5vw, 100% 0, 100% calc(100% - 5vw),0 100%);
+			background-color: #f6f6cd;
+			margin-top: -100px;
+			padding-top: 100px;
+			height: 100vh;
 		}
-		span
+		.full
 		{
-			font-size: 25px;
-			color: rgba(255,255,255,.5);
+			background-size: cover;
 		}
-		
-	</style>
+		.firstPageGreet
+		{
+			color: #20314a;
+		}
+		.elegantShadow
+		{
+			text-shadow:
+				       -20px -65px 0px 		rgba(0,0,0,.1),
+				      30px 65px 0px 		rgba(0,0,0,.1),
+				      -40px -125px 0px 		rgba(0,0,0,.1),
+				      50px 125px 0px 		rgba(0,0,0,.1),
+				      -60px -185px 0px 		rgba(0,0,0,.1),
+				      70px 185px 0px 		rgba(0,0,0,.1),
+				      -80px -245px 0px 		rgba(0,0,0,.1),
+				      90px 245px 0px 		rgba(0,0,0,.1),
+				      -100px -305px 0px 	rgba(0,0,0,.1),
+				      110px 305px 0px 		rgba(0,0,0,.1),
+				      -120px -365px 0px 	rgba(0,0,0,.1),
+				      130px 365px 0px 		rgba(0,0,0,.1),
+				      -140px -425px 0px 	rgba(0,0,0,.1),
+				      150px 425px 0px 		rgba(0,0,0,.1),
+				      -160px -485px 0px 	rgba(0,0,0,.1),
+				      170px 485px 0px 		rgba(0,0,0,.1),
+				      -180px -545px 0px 	rgba(0,0,0,.1),
+				      190px 545px 0px 		rgba(0,0,0,.1),
+				      -200px -605px 0px 	rgba(0,0,0,.1),
+				      210px 605px 0px 		rgba(0,0,0,.1)
+				      ;
+		}
 
+	</style>
 </head>
 <body>
-<div id="wrapper" class ="container-fluid">
-	<div class="row section">
-		<div class="col-md-12 orange slide">
-			<center>
-			<h1 id="me" onselectstart = "return false" style="padding:8px; color: rgba(255,255,255,1); font-size: 70px;"><b>GLAD TO HAVE YOU HERE!<br></b> <span id="mee" style="border-top: 1px solid; border-bottom: 1px solid;"> I'M ANANT !</span></h1>
-		<div style="position: absolute; bottom: 20px; left:50%; margin-left: -16px;">
-		<div id="arrow1" class="glyphicon glyphicon-menu-down" style="font-size: 35px"></div><br>
-		<div id="arrow2" class="glyphicon glyphicon-menu-down" style="font-size: 30px"></div><br>
-		<div id="arrow3" class="glyphicon glyphicon-menu-down" style="font-size: 25px"></div>
-		</div>
-		</center>
-		</div>
+	<div class = "full">
+	<section class="one">
+			<h1 class="elegantShadow firstPageGreet" style="font-size: 75px;margin-top: auto;">GLAD TO HAVE YOU HERE!</h1>
+			<span style="font-family: elegant; border-bottom:15px solid;" class="firstPageGreet">I'm Anant</span>
+	</section>
+	<section class="two">
+		<h2>something about me</h2>
+		
+	</section>
+	<section class="three">
+		<h2>some personal projects i've worked on</h2>
+		<ul>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+		</ul>
+	</section>
 	</div>
-	<div class = "row section">
-		<div class = "col-md-1"></div>
-		<div class = "col-md-10">
-			<h3 id="aboutMe" style="color:rgba(255, 102, 0,1)">About Me</h3>
-			<br>
-			<div style="padding: 10px; text-align: justify; border-left: 5px solid;border-right: 5px solid; border-color: rgba(255, 102, 0,.7);font-size: 20px;">
-			Currently I'm a B.Tech 3<sup>rd</sup> year student at Jaypee Institute of Information Technology, Noida, India (as of January, 2k19). I am always inclined towards designing and developing things that looked simple, clean and nothing less than an art. To quench my thirst for designing such art, may it be a Game, Website or an Android app, I've dipped my hands in technologies like HTML, CSS, Javascript (jQuery), Bootstrap, Android Studio, Java, Unity and several others. I still keep looking for more ways to get inspired to keep myself going.
-			</div>
-		</div>	
-	</div>
-</div>
-
 </body>
 </html>
