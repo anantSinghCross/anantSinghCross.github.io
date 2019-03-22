@@ -1,85 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About Me</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="fullpage.css" />
-	<script type="text/javascript" src="fullpage.min.js"></script>
-
-
-	<script>
-		$(document).ready(function(){
-			$("#wrapper").fullpage();
-		});
-		$(document).ready(function(){
-  			$("#aboutMe").click(function(){
-    			$("#aboutMeContent").slideToggle("slow");
-  			});
-		});
-		$(document).ready(function(){
-  			$("#aboutMeAlso").click(function(){
-    			$("#aboutMeAlsoContent").slideToggle("slow");
-  			});
-		});
-	
-	</script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>Anant's Portfolio</title>
 	<style type="text/css">
-		@keyframes bouncing
-		{
-  			0%  { bottom: 0;}
-  			100%{ bottom: 30px;}
-		}
-		@keyframes squeezeBorder
-		{
-			0% {	border-color:rgba(255,255,255,.2);}
-			50% {	border-color:rgba(255, 51, 0,1);}
-			100%{	border-color:rgba(255,255,255,.2);}
-		}
-		@keyframes facebook
-		{
-			0%{right:3%;}
-			100%{right:4%;}
-		}
-		@keyframes insta
-		{
-			0%{right:3%;}
-			100%{right:5%;}
-		}
-		@keyframes github
-		{
-			0%{right:3%;}
-			100%{right:5%;}
-		}
-		#scroller
-		{
-			animation: bouncing .7s cubic-bezier(0.1,.25,.1,1) 0s infinite alternate both;
-		}
-		.mediaAnim1
-		{
-			animation: facebook 1.4s cubic-bezier(0.1,.5,.1,1) 0s infinite alternate both;
-		}
-		.mediaAnim2
-		{
-			animation: insta 1.4s cubic-bezier(0.2,.5,.1,1) 0s infinite alternate both;
-		}
-		.mediaAnim3
-		{
-			animation: github 1.4s cubic-bezier(0.3,.5,.1,1) 0s infinite alternate both;
-		}
-		@font-face
-		{
-			font-family: theRegFont;
-			src:url("font/regular.woff");
-		}
-		@font-face
-		{
-			font-family: azonix;
-			src:url("font/azonix.woff");
-		}
+		::-webkit-scrollbar {
+            width: 0px;
+            background-color: rgba(0,0,0,0);
+        }
 		@font-face
 		{
 			font-family: theNewBoldFont;
@@ -87,100 +15,170 @@
 		}
 		@font-face
 		{
-			font-family: theBoldFont;
-			src:url("font/bold.woff");
+			font-family: elegant;
+			src:url("font/elegant.woff");
 		}
+		html
+		{
+			margin: 0;
+			padding: 0;
+			overflow: scroll;
+			overflow-x: hidden;
+		}
+
 		body
 		{
-			font-family: theRegFont;
-			color: rgba(255,255,255,.7);
-			font-size: 18px;
-			min-height:100%;
-  			background:linear-gradient(0deg,rgba(26,26,26,0.92),rgba(26,26,26,0.92)),url("backgrounds/pattern2.jpg");
-  			background-size:cover;
+			background-color: #20314a;
+			margin:0;
+			padding:0;
 		}
-		.orange
+		.one
 		{
-			background-color: rgba(255, 51, 0,.7);
+			font-family: theNewBoldFont;
+			display: grid;
+			place-items:center;
+			background-color: #f6f6cd;
+			clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw),0 100%);
+			margin-top: -25px;
+			height: 100vh;
 		}
-		h1
-		{
-			color: black;
+		.two
+		{	color: #f6f6cd;
+			background-color: #20314a;
+			margin-top: -100px;
+			padding-top: 100px;
+			height: 100vh;	
 		}
-		span
+		.three
 		{
-			font-size: 25px;
-			color: rgba(255,255,255,.7);
+			color: #20314a;
+			clip-path: polygon(0 5vw, 100% 0, 100% calc(100% - 5vw),0 100%);
+			background-color: #f6f6cd;
+			margin-top: -100px;
+			padding-top: 100px;
+			height: 100vh;
 		}
-		#aboutMe
+		.full
 		{
-			animation: squeezeBorder 2s infinite;
+			background-size: cover;
+		}
+		.firstPageGreet
+		{
+			color: #20314a;
 		}
 		.elegantShadow
 		{
-			text-shadow: 
-				       -20px -65px 0px 		rgba(0,0,0,.05),
-				      30px 65px 0px 		rgba(0,0,0,.05),
-				      -40px -125px 0px 		rgba(0,0,0,.05),
-				      50px 125px 0px 		rgba(0,0,0,.05),
-				      -60px -185px 0px 		rgba(0,0,0,.05),
-				      70px 185px 0px 		rgba(0,0,0,.05),
-				      -80px -245px 0px 		rgba(0,0,0,.05),
-				      90px 245px 0px 		rgba(0,0,0,.05),
-				      -100px -305px 0px 	rgba(0,0,0,.05),
-				      110px 305px 0px 		rgba(0,0,0,.05),
-				      -120px -365px 0px 	rgba(0,0,0,.05),
-				      130px 365px 0px 		rgba(0,0,0,.05),
-				      -140px -425px 0px 	rgba(0,0,0,.05),
-				      150px 425px 0px 		rgba(0,0,0,.05),
-				      -160px -485px 0px 	rgba(0,0,0,.05),
-				      170px 485px 0px 		rgba(0,0,0,.05),
-				      -180px -545px 0px 	rgba(0,0,0,.05),
-				      190px 545px 0px 		rgba(0,0,0,.05),
-				      -200px -605px 0px 	rgba(0,0,0,.05),
-				      210px 605px 0px 		rgba(0,0,0,.05)
+			text-shadow:
+				       -20px -65px 0px 		rgba(0,0,0,.1),
+				      30px 65px 0px 		rgba(0,0,0,.1),
+				      -40px -125px 0px 		rgba(0,0,0,.1),
+				      50px 125px 0px 		rgba(0,0,0,.1),
+				      -60px -185px 0px 		rgba(0,0,0,.1),
+				      70px 185px 0px 		rgba(0,0,0,.1),
+				      -80px -245px 0px 		rgba(0,0,0,.1),
+				      90px 245px 0px 		rgba(0,0,0,.1),
+				      -100px -305px 0px 	rgba(0,0,0,.1),
+				      110px 305px 0px 		rgba(0,0,0,.1),
+				      -120px -365px 0px 	rgba(0,0,0,.1),
+				      130px 365px 0px 		rgba(0,0,0,.1),
+				      -140px -425px 0px 	rgba(0,0,0,.1),
+				      150px 425px 0px 		rgba(0,0,0,.1),
+				      -160px -485px 0px 	rgba(0,0,0,.1),
+				      170px 485px 0px 		rgba(0,0,0,.1),
+				      -180px -545px 0px 	rgba(0,0,0,.1),
+				      190px 545px 0px 		rgba(0,0,0,.1),
+				      -200px -605px 0px 	rgba(0,0,0,.1),
+				      210px 605px 0px 		rgba(0,0,0,.1)
 				      ;
 		}
-		
+		.insetShadow
+		{
+			color: #4a5262;
+			transform: rotateZ(-3deg);
+			margin-top: -5px;
+		}
+		.insta
+		{
+			font-size: 35px; color:#7b8383;position: absolute; right: 20px;top: 50px;
+			transition:300ms;
+		}
+		.git
+		{
+			font-size: 30px; color:#7b8383;position: absolute; right: 20px;top: 120px;
+			transition:300ms;
+		}
+		.insta:hover
+		{
+			color:#313952;
+			top:45px;
+			font-size: 45px;
+		}
+		.git:hover
+		{
+			color:#313952;
+			top: 115px;
+			font-size: 40px;
+		}
 	</style>
-
 </head>
 <body>
-<div id="wrapper" class ="container-fluid">
-	<div class="row section">
-		<div class="col-md-12 orange slide">
-			<div style="position: absolute; top: 20px; right:3%; font-size: 45px;">
-			<div >
-				<i class="fab fa-facebook"></i>
-			</div>
-			<div>
-				<i class="fab fa-instagram"></i>
-			</div>
-			<div>
-				<i class="fab fa-github"></i>
-			</div>
-			</div>
-			<center>
-			<h1 class="elegantShadow" id="me"  onselectstart = "return false" style="font-family: theNewBoldFont; padding:8px; color: rgba(255,255,255,1); font-size: 70px;">GLAD TO HAVE YOU HERE!<br></h1> <span id="mee" style="font-family: azonix;">I'M ANANT</span>
-		<div id="scroller" style="position: absolute; bottom: 20px; left:50%; margin-left: -16px;">
-		<div id="arrow2" class="glyphicon glyphicon-menu-down" style="font-size: 25px;"></div><br>
-		<div id="arrow3" class="glyphicon glyphicon-menu-down" style="font-size: 25px;"></div>
+	<div class = "full">
+	<section class="one">
+		<div class="insta">
+			<i class="fab fa-instagram"onclick="window.open('https://www.instagram.com/cross_samurai/?hl=en')"></i>
+		</div>
+		<div class="git">
+			<i class="fab fa-github" onclick="window.open('https://github.com/anantSinghCross')"></i>
+		</div>
+
+		<h1 class="elegantShadow firstPageGreet" style="font-size: 75px;margin-top: auto;">GLAD TO HAVE YOU HERE!</h1>
+		<span style="font-family: elegant; border-bottom:15px solid;" class="firstPageGreet">i'm anant</span>
+	</section>
+	<section class="two">
+		<h2 class="insetShadow" style="font-family: theNewBoldFont; font-size: 40px">some things about me</h2>
+		<br>
+		<div class="aboutMe" style="padding: 50px;">
+			<p style="font-family: elegant; color:#dedebd; transform: rotateZ(-3deg);">
+				i'm a computer science student, based in Noida, pursuing bachelor's degree and currently in my pre-final year. i'm always fascinated by the technology around me. since my fresher days i've consistently diped my hands in various areas out of curiosity like Web Development, Game Development, Android App Development and Machine Learning. i love to put everything i can to the projects that interest me!<br><br>
+				i love designing user interfaces too. i had hobbies such as making sketches and drawings that eventually turned into making simplistic and beautiful interfaces. working on the color scheme is the most exciting part of it.
+				<br><br>
+				i'm also fond of travelling. i've been to many places in India itself but never actually went outside. food is also a major part of my routine. having street food is anytime more appealing to me than eating in some exorbitant restaurant.<br><br> 
+				as of now, i don't have work experience but i do have a considerable history of learning. :D
+
+			</p>
 		</div>
 		
-		</center>
-		</div>
+	</section>
+	<section class="three">
+		<h2>some personal projects i've worked on</h2>
+		<ul>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+			<li>
+				<div>
+					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
+				</div>
+			</li>
+		</ul>
+	</section>
 	</div>
-	<div class = "row section">
-		<div class = "col-md-2"></div>
-		<div class = "col-md-8">
-			<h3 onselectstart="return false" id="aboutMe" style="padding-left: 10px;border-left: 5px solid;border-right: 5px solid; border-color:rgba(255,255,255,.2);  background-color: rgba(255,255,255,.05); color:rgba(255, 51, 0,1); font-size: 40px;">About Me</h3>
-			<br>
-			<div onselectstart="return false" style="padding: 10px; text-align: justify; border-left: 5px solid;border-right: 5px solid; border-color: rgba(255, 51, 0,.7);font-size: 20px;">
-			Currently I'm a B.Tech 3<sup>rd</sup> year based in India (as of January, 2k19). I am always inclined towards designing and developing things that looked simple, clean and nothing less than an art. To quench my thirst for designing such art, may it be a Game, Website or an Android app, I've dipped my hands in technologies like HTML, CSS, Javascript (jQuery), Bootstrap, Android Studio, Java, Unity and several others. I still keep looking for more ways to get inspired to keep myself going.
-			</div>
-		</div>	
-	</div>
-</div>
-
 </body>
 </html>
