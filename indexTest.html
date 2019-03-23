@@ -56,7 +56,6 @@
 			background-color: #f6f6cd;
 			margin-top: -100px;
 			padding-top: 100px;
-			height: 100vh;
 		}
 		.full
 		{
@@ -99,25 +98,29 @@
 		}
 		.insta
 		{
-			font-size: 35px; color:#7b8383;position: absolute; right: 20px;top: 50px;
-			transition:300ms;
+			font-size: 35px; color:#7b8383;position: absolute; right: 40px;top: 50px;
+			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
 		.git
 		{
-			font-size: 30px; color:#7b8383;position: absolute; right: 20px;top: 120px;
-			transition:300ms;
+			font-size: 30px; color:#7b8383;position: absolute; right: 40px;top: 120px;
+			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
 		.insta:hover
 		{
 			color:#313952;
-			top:45px;
-			font-size: 45px;
+			transform: scale(2);
 		}
 		.git:hover
 		{
 			color:#313952;
-			top: 115px;
-			font-size: 40px;
+			transform: scale(2);
+		}
+		.projectDiv
+		{
+			color:#414a5a;
+			font-family: elegant;
+			background-color: #bdbda4aa;
 		}
 	</style>
 </head>
@@ -150,34 +153,34 @@
 		
 	</section>
 	<section class="three">
-		<h2>some personal projects i've worked on</h2>
-		<ul>
-			<li>
-				<div>
-					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
-				</div>
-			</li>
-			<li>
-				<div>
-					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
-				</div>
-			</li>
-			<li>
-				<div>
-					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
-				</div>
-			</li>
-			<li>
-				<div>
-					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
-				</div>
-			</li>
-			<li>
-				<div>
-					Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum Lorem ipsuum 
-				</div>
-			</li>
-		</ul>
+		<h2 class="insetShadow" style="font-family: theNewBoldFont; font-size: 40px; color:#a4a494;">
+			some personal projects i've worked on
+		</h2><br>
+		<div class="projectDiv">
+			<h3>Project 1</h3>
+			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		</div>
+		<div class="projectDiv">
+			<h3>Project 1</h3>
+			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		</div>
+		<div class="projectDiv">
+			<h3>Project 1</h3>
+			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		</div>
+		<div class="projectDiv">
+			<h3>Project 1</h3>
+			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		</div>
+		<div class="projectDiv">
+			<h3>Project 1</h3>
+			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		</div>
+		<div class="projectDiv">
+			<h3>Project 1</h3>
+			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		</div>
+		
 	</section>
 	</div>
 </body>
