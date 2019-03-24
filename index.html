@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<title>Anant's Portfolio</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
 		::-webkit-scrollbar {
             width: 0px;
@@ -31,6 +32,7 @@
 			background-color: #20314a;
 			margin:0;
 			padding:0;
+			overflow: hidden;
 		}
 		.one
 		{
@@ -55,7 +57,7 @@
 			clip-path: polygon(0 5vw, 100% 0, 100% calc(100% - 5vw),0 100%);
 			background-color: #f6f6cd;
 			margin-top: -100px;
-			padding-top: 100px;
+			padding-top: 75px;
 		}
 		.full
 		{
@@ -93,7 +95,7 @@
 		.insetShadow
 		{
 			color: #4a5262;
-			transform: rotateZ(-3deg);
+			transform: rotateZ(-3deg) skew(-10deg);
 			margin-top: -5px;
 		}
 		.insta
@@ -125,9 +127,133 @@
 			font-family: elegant;
 			background-color: #bdbda4aa;
 		}
+		.loaderBG
+		{
+			margin:0;
+			padding: 0;
+			height: 100vh;
+			width: 100vw;
+			background: #20314a;
+		}
+		.loader
+		{
+			position: absolute;
+			margin:0;
+			padding: 0;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%) rotate(45deg);
+			width: 110px;
+			height: 110px;
+			animation: animate 1.5s cubic-bezier(.49,1.54,.54,1.01) infinite;
+		}
+		.loader span
+		{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background:#eeeecd;
+			animation: rotate 1.5s cubic-bezier(.49,1.54,.54,1.01) infinite;
+		}
+		.loader span:nth-child(1)
+		{
+			top: 0;
+			left: 0;
+		}
+
+		.loader span:nth-child(2)
+		{
+			top: 0;
+			right: 0;
+		}
+		.loader span:nth-child(3)
+		{
+			bottom: 0;
+			left: 0;
+		}
+		.loader span:nth-child(4)
+		{
+			bottom:0;
+			right:0;
+		}
+		@keyframes animate
+		{
+			0%
+			{
+				width: 110px;
+				height: 110px;
+			}
+			10%
+			{
+				width: 110px;
+				height: 110px;
+			}
+			50%
+			{
+				width: 150px;
+				height: 150px;
+
+			}
+			90%
+			{
+				width: 110px;
+				height: 110px;
+			}
+			100%
+			{
+				width: 110px;
+				height: 110px;
+			}
+		}
+		@keyframes rotate
+		{
+			0%
+			{
+				transform: rotate(0deg);
+			}
+			10%
+			{
+				transform: rotate(0deg);
+			}
+			50%
+			{
+				transform: rotate(90deg);
+			}
+			90%
+			{
+				transform: rotate(90deg);
+			}
+			100%
+			{
+				transform: rotate(90deg);
+			}
+		}
 	</style>
+	<script>
+		$(document).ready(function(){
+			$(".full").hide();
+			setTimeout(function() {
+				$(".full").show();
+  				$("#loading").animate({height:"0px"});
+  				$("#loadingIcon").fadeOut(100);
+			},4000);
+		});
+	</script>
 </head>
-<body>
+<body id="#yolo">
+
+<!-- making a page loader -->
+	<div class="loaderBG" id="loading">
+		<div class="loader" id="loadingIcon">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>	
+	</div>
+
+<!-- end of page loader -->
+
 	<div class = "full">
 	<section class="one">
 		<div class="insta">
@@ -144,7 +270,7 @@
 		<h2 class="insetShadow" style="font-family: theNewBoldFont; font-size: 40px">some things about me</h2>
 		<br>
 		<div class="aboutMe" style="padding: 50px;">
-			<p style="font-family: elegant; color:#dedebd; transform: rotateZ(-3deg);">
+			<p style="font-family: elegant; color:#dedebd; transform: rotateZ(-3deg) skew(-5deg);">
 				i'm a computer science student, based in Noida, pursuing bachelor's degree and currently in my pre-final year. i'm always fascinated by the technology around me. since my fresher days i've consistently diped my hands in various areas out of curiosity like Web Development, Game Development, Android App Development and Machine Learning. i love to put everything i can to the projects that interest me!<br><br>
 				i love designing user interfaces too. i had hobbies such as making sketches and drawings that eventually turned into making simplistic and beautiful interfaces. working on the color scheme is the most exciting part of it.
 				<br><br>
@@ -164,23 +290,23 @@
 			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
 		</div>
 		<div class="projectDiv">
-			<h3>Project 1</h3>
+			<h3>Project 2</h3>
 			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
 		</div>
 		<div class="projectDiv">
-			<h3>Project 1</h3>
+			<h3>Project 3</h3>
 			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
 		</div>
 		<div class="projectDiv">
-			<h3>Project 1</h3>
+			<h3>Project 4</h3>
 			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
 		</div>
 		<div class="projectDiv">
-			<h3>Project 1</h3>
+			<h3>Project 5</h3>
 			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
 		</div>
 		<div class="projectDiv">
-			<h3>Project 1</h3>
+			<h3>Project 6</h3>
 			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
 		</div>
 		
