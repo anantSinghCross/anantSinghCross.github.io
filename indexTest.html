@@ -120,12 +120,22 @@
 		}
 		.projectDiv
 		{
-			font-size: 13px;
+
+			width: 500px;
+			cursor: pointer;
+			transform: skew(-3deg);
+			font-size: 14px;
 			padding: 50px;
 			margin:10px;
-			color:#414a5a;
+			color:#dedebd;
 			font-family: elegant;
-			background-color: #bdbda4aa;
+			background-color: #20314aee;
+			box-shadow: 0 0 20px rgba(0,0,0,.5);
+			transition: 500ms cubic-bezier(.49,1.54,.54,1.01);
+		}
+		.projectDiv:hover
+		{
+			transform: rotate(3deg) skew(0deg) scale(1.05);
 		}
 		.loaderBG
 		{
@@ -272,44 +282,66 @@
 		<div class="aboutMe" style="padding: 50px;">
 			<p style="font-family: elegant; color:#dedebd; transform: rotateZ(-3deg) skew(-5deg);">
 				i'm a computer science student, based in Noida, pursuing bachelor's degree and currently in my pre-final year. i'm always fascinated by the technology around me. since my fresher days i've consistently diped my hands in various areas out of curiosity like Web Development, Game Development, Android App Development and Machine Learning. i love to put everything i can to the projects that interest me!<br><br>
-				i love designing user interfaces too. i had hobbies such as making sketches and drawings that eventually turned into making simplistic and beautiful interfaces. working on the color scheme is the most exciting part of it.
+				i love designing user interfaces too. i had hobbies like making sketches and drawings that eventually turned into making simplistic and beautiful interfaces. working on the color scheme is the most exciting part of it.
 				<br><br>
 				i'm also fond of travelling. i've been to many places in India itself but never actually went outside. food is also a major part of my routine. having street food is anytime more appealing to me than eating in some exorbitant restaurant.<br><br> 
 				as of now, i don't have work experience but i do have a considerable history of learning. :D
 
 			</p>
 		</div>
-		
 	</section>
 	<section class="three">
 		<h2 class="insetShadow" style="font-family: theNewBoldFont; font-size: 40px; color:#a4a494;">
 			some personal projects i've worked on
 		</h2><br>
-		<div class="projectDiv">
-			<h3>Project 1</h3>
-			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		<div style="display: flex; transform: rotate(-3deg); justify-content: space-evenly;">
+			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/boston-housing-price-prediction')">
+				<h3>Boston Housing Price Prediction</h3>
+				<p>Deployment of Boston Housing price prediction model on web
+					using Python's backend framework Flask</p>
+				<p>Model uses various factors to predict housing prices in Boston</p>
+			</div>
+			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/iris-flower-classification')">
+				<h3>Iris Flower Classification</h3>
+				<p>Deployment of Iris Flower Classification model on web using
+					Python's backend framework Flask</p>
+				<p>Model uses several charateristics to predict type of a flower</p>
+			</div>
 		</div>
-		<div class="projectDiv">
-			<h3>Project 2</h3>
-			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		<div style="display: flex;transform: rotate(-3deg);justify-content: space-evenly;">
+			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/handwritten-digit-recognition')">
+				<h3>Handwritten Digit Recognition</h3>
+				<p>Recognition of handwritten digits using Neural Networks</p>
+				<p>Uses MNIST dataset for training the model</p>
+			</div>
+			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/hand-gesture-recognition')">
+				<h3>Hand Gesture Recognition</h3>
+				<p>Recognition of hand gestures using Convolutional Neural Networks
+					and OpenCV</p>
+				<p>Uses my own compiled dataset for training the CNN model</p>
+			</div>
 		</div>
-		<div class="projectDiv">
-			<h3>Project 3</h3>
-			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		<div style="display: flex;transform: rotate(-3deg);justify-content: space-evenly;">
+			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/spikey-walls')">
+				<h3>Hyper Casual Game (Spikey Walls)</h3>
+				<p>A game that I developed using Unity Game Engine</p>
+				<p>Was a pet project that I indulged myself into purely out of curiosity
+					for game development</p>
+			</div>
+			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/color-hex-2d-unity')">
+				<h3>Hyper Casual Game (Color Hexagon)</h3>
+				<p>Another one of my pet projects that I developed on Unity Game
+					Engine out of my curiosity for game development</p>
+			</div>
 		</div>
-		<div class="projectDiv">
-			<h3>Project 4</h3>
-			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
+		<div style="display: flex;transform: rotate(-3deg);justify-content: space-evenly;">
+			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/web-project-library-php-mysql')">
+				<h3>Library Management System</h3>
+				<p>Developed a website which allows users to login/signup, issue their
+					favorite books and create their wishlists</p>
+				<p>Used HTML, CSS, PHP and JS for the development</p>
+			</div>
 		</div>
-		<div class="projectDiv">
-			<h3>Project 5</h3>
-			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
-		</div>
-		<div class="projectDiv">
-			<h3>Project 6</h3>
-			<p>qwer qwer qwer qwer qwer qwer qwer qwer qwer qwer qwerqw erqwe rqwe rqwe r.</p>
-		</div>
-		
 	</section>
 	</div>
 </body>
