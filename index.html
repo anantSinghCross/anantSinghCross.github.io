@@ -5,10 +5,20 @@
 	<title>Anant's Portfolio</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
-		::-webkit-scrollbar {
+		::-webkit-scrollbar
+		{
             width: 0px;
             background-color: rgba(0,0,0,0);
         }
+        ::-moz-selection 
+        {
+ 			color: #9c3900;
+  			background: #ffffff;
+		}
+		::selection {
+  			color: #ffffff;
+  			background: #9c3900;
+		}
 		@font-face
 		{
 			font-family: theNewBoldFont;
@@ -18,6 +28,11 @@
 		{
 			font-family: elegant;
 			src:url("font/elegant.woff");
+		}
+		@font-face
+		{
+			font-family: signatureFont;
+			src:url("font/signatureFont.woff");
 		}
 		html
 		{
@@ -58,11 +73,13 @@
 			background-color: #f6f6cd;
 			margin-top: -100px;
 			padding-top: 75px;
+			padding-bottom: 10vw;
 		}
 		.four
 		{
 			color: #f6f6cd;
 			background-color: #20314a;
+			padding-bottom: 5vw;
 		}
 		.full
 		{
@@ -118,17 +135,15 @@
 			font-size: 30px; color:#7b8383;position: absolute; right: 40px;top: 190px;
 			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
-		.insta:hover
+		.linkedin
 		{
-			color:#313952;
-			transform: scale(2);
+			font-size: 30px; color:#7b8383;position: absolute; right: 40px;top: 260px;
+			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
-		.git:hover
-		{
-			color:#313952;
-			transform: scale(2);
-		}
-		.playstore:hover
+		.insta:hover,
+		.git:hover,
+		.playstore:hover,
+		.linkedin:hover
 		{
 			color:#313952;
 			transform: scale(2);
@@ -290,6 +305,9 @@
 		<div class="playstore">
 			<i class="fab fa-google-play" onclick="window.open('https://play.google.com/store/apps/dev?id=4665898736178557001')"></i>
 		</div>
+		<div class="linkedin">
+			<i class="fab fa-linkedin-in" onclick="window.open('https://www.linkedin.com/in/anant-singh-7a6856139')"></i>
+		</div>
 		<h1 class="elegantShadow firstPageGreet" style="font-size: 75px;margin-top: auto;">GLAD TO HAVE YOU HERE!</h1>
 		<span style="font-family: elegant; border-bottom:15px solid;" class="firstPageGreet">i'm anant</span>
 	</section>
@@ -298,7 +316,7 @@
 		<br>
 		<div class="aboutMe" style="padding: 50px;">
 			<p style="font-family: elegant; color:#dedebd; transform: rotateZ(-3deg) skew(-5deg);">
-				i'm a computer science student, based in Noida, pursuing bachelor's degree and currently in my pre-final year. i'm always fascinated by the technology around me. since my fresher days i've consistently diped my hands in various areas out of curiosity like Web Development, Game Development, Android App Development and Machine Learning. i love to put everything i can to the projects that interest me!<br><br>
+				i'm a computer science student, based in Noida, pursuing bachelor's degree and currently in my pre-final year. i'm always fascinated by the technology around me. since my fresher days i've consistently dipped my hands in various areas out of curiosity like Web Development, Game Development, Android App Development and Machine Learning. i love to put everything i can to the projects that interest me!<br><br>
 				i love designing user interfaces too. i had hobbies like making sketches and drawings that eventually turned into making simplistic and beautiful interfaces. working on the color scheme is the most exciting part of it.
 				<br><br>
 				i'm also fond of travelling. i've been to many places in India itself but never actually went outside. food is also a major part of my routine. having street food is anytime more appealing to me than eating in some exorbitant restaurant.<br><br> 
@@ -314,13 +332,13 @@
 		<div style="display: flex; transform: rotate(-3deg); justify-content: space-evenly;">
 			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/boston-housing-price-prediction')">
 				<h3>Boston Housing Price Prediction</h3>
-				<p>Deployment of Boston Housing price prediction model on web
+				<p>Training and deployment of Boston Housing price prediction model on web
 					using Python's backend framework Flask</p>
 				<p>Model uses various factors to predict housing prices in Boston</p>
 			</div>
 			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/iris-flower-classification')">
 				<h3>Iris Flower Classification</h3>
-				<p>Deployment of Iris Flower Classification model on web using
+				<p>Training and deployment of Iris Flower Classification model on web using
 					Python's backend framework Flask</p>
 				<p>Model uses several charateristics to predict type of a flower</p>
 			</div>
@@ -328,14 +346,14 @@
 		<div style="display: flex;transform: rotate(-3deg);justify-content: space-evenly;">
 			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/handwritten-digit-recognition')">
 				<h3>Handwritten Digit Recognition</h3>
-				<p>Recognition of handwritten digits using Neural Networks</p>
+				<p>Training a model for recognition of handwritten digits using Neural Networks</p>
 				<p>Uses MNIST dataset for training the model</p>
 			</div>
 			<div class="projectDiv" onclick="window.open('https://github.com/anantSinghCross/hand-gesture-recognition')">
 				<h3>Hand Gesture Recognition</h3>
-				<p>Recognition of hand gestures using Convolutional Neural Networks
+				<p>Training a model for recognition of hand gestures using Convolutional Neural Networks
 					and OpenCV</p>
-				<p>Uses my own compiled dataset for training the CNN model</p>
+				<p>Uses my own compiled dataset of hand gestures for training the CNN model</p>
 				<p>I'm currently working on this for my minor project</p>
 			</div>
 		</div>
@@ -364,7 +382,13 @@
 		</div>
 	</section>
 	<section class="four">
-		
+		<div style="display: flex; justify-content: space-evenly;">
+			<div >
+				<h1 style="transform: skew(0,-3deg); font-family: theNewBoldFont;font-size: 2em; letter-spacing: .1em;">Thanks for visiting!</h1>
+				<p style="font-family: elegant; font-size:12px; text-align: center;letter-spacing: .1em; "><span style="color:rgba(246, 246, 205, 0.5)">please reach out to</span><br>anantsingh.cse@gmail.com</p>
+
+			</div>
+		</div>
 	</section>
 	</div>
 </body>
