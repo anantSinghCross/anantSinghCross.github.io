@@ -295,6 +295,26 @@
 			{
 				text-shadow: 0 0 20px rgba(0,0,0,.3);
 			}
+			.insta
+			{
+				
+				right: 20%;top: 5%;
+			}
+			.git
+			{	
+				
+				right: 40%;top: 5%;
+			}
+			.playstore
+			{	
+				
+				right: 60%;top: 5%;
+			}
+			.linkedin
+			{	
+				
+				right: 80%;top: 5%;
+			}
 		}
 
 	</style>
@@ -316,8 +336,6 @@
 			calcScroll =  (scrollPos/scrollRange)*$(window).width();
 			$(".scroller").css("left",($(window).width()/2-calcScroll/2)+"px");
 			$(".greetingContainer").css("top",($(window).height())/2+scrollPos*.18+"px");
-
-
 		});
 
 		$(window).scroll(function(){
