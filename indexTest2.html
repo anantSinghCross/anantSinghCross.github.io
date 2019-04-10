@@ -104,6 +104,7 @@
 		}
 		body, html
 		{
+			scrollbar-width:none;
 			scroll-behavior: smooth;
 			cursor: url(pointer.cur),auto;
 			background:var(--accent);
@@ -112,7 +113,10 @@
 			display: grid;
 		}
 		section:nth-child(1)
-		{
+		{	
+			padding-right: 20px;
+			padding-left: 20px;
+
 			background-color: var(--primary);
 			height: 100vh;
 		}
@@ -211,7 +215,7 @@
 		}
 		.greetingContainer
 		{
-			width: 70%;
+			width: 100%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -221,21 +225,25 @@
 		}
 		.insta
 		{
+			z-index: 100;
 			font-size: 35px; color:var(--secondary);position: absolute; right: 5%;top: 5%;
 			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
 		.git
-		{
+		{	
+			z-index: 100;
 			font-size: 30px; color:var(--secondary);position: absolute; right: 5%;top: 15%;
 			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
 		.playstore
-		{
+		{	
+			z-index: 100;
 			font-size: 30px; color:var(--secondary);position: absolute; right: 5%;top: 25%;
 			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
 		.linkedin
-		{
+		{	
+			z-index: 100;
 			font-size: 30px; color:var(--secondary);position: absolute; right: 5%;top: 35%;
 			transition:300ms cubic-bezier(.49,1.54,.54,1.01);
 		}
@@ -265,57 +273,28 @@
 		{
 			cursor: url("hand.cur"),pointer;
 		}
-		.loaderBG
-		{
-			margin:0;
-			padding: 0;
-			height: 100vh;
-			width: 100vw;
-			background: var(--secondary);
-		}
-		.loader
-		{
-			position:fixed;
-			margin:0;
-			padding: 0;
-			top:50%;
-			left:50%;
-			transform: translate(-50%,-50%) rotate(45deg);
-			width: 110px;
-			height: 110px;
-			animation: animate 1.5s cubic-bezier(.49,1.54,.54,1.01) 3;
-		}
-		.loader span
-		{
-			position: absolute;
-			width: 50px;
-			height: 50px;
-			background: var(--accent);
-			animation: rotate 1.5s cubic-bezier(.49,1.54,.54,1.01) 3;
-		}
-		.loader span:nth-child(1)
-		{
-			top: 0;
-			left: 0;
-		}
-		.loader span:nth-child(2)
-		{
-			top: 0;
-			right: 0;
-		}
-		.loader span:nth-child(3)
-		{
-			bottom: 0;
-			left: 0;
-		}
-		.loader span:nth-child(4)
-		{
-			bottom:0;
-			right:0;
-		}
 		.halfOpacity
 		{
 			opacity: .5;
+		}
+		@media only screen and (max-width: 878px)
+		{
+			.elegantShadow
+			{
+				text-shadow: 0 0 20px rgba(0,0,0,.3);
+			}
+		}
+		@media only screen and (max-width: 600px)
+		{
+			.projectsContainer
+			{
+				display: grid;
+				grid-template-columns: auto;
+			}
+			.elegantShadow
+			{
+				text-shadow: 0 0 20px rgba(0,0,0,.3);
+			}
 		}
 
 	</style>
@@ -436,7 +415,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="justify">
+	<section>
 		<h1>Thanks For Visiting!</h1>
 		<p><span class="halfOpacity">i would love if you reach out to</span><br>anantsingh.cse@gmail.com</p>
 	</section>
