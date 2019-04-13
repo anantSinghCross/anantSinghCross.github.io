@@ -177,11 +177,8 @@
 				      130px 365px 0px 		rgba(0,0,0,.1),
 				      -140px -425px 0px 	rgba(0,0,0,.1),
 				      150px 425px 0px 		rgba(0,0,0,.1),
-				      -160px -485px 0px 	rgba(0,0,0,.1),
-				      170px 485px 0px 		rgba(0,0,0,.1),
-				      -180px -545px 0px 	rgba(0,0,0,.1),
-				      190px 545px 0px 		rgba(0,0,0,.1),
-				      -200px -605px 0px 	rgba(0,0,0,.1);
+				      -160px -485px 0px 	rgba(0,0,0,.1);
+				      
 		}
 		.projectsContainer
 		{
@@ -335,12 +332,12 @@
 			scrollPos = $(window).scrollTop();
 			calcScroll =  (scrollPos/scrollRange)*$(window).width();
 			$(".scroller").css("left",($(window).width()/2-calcScroll/2)+"px");
-			$(".greetingContainer").css("top",($(window).height())/2+scrollPos*.18+"px");
+			$(".greetingContainer").css("top",($(window).height())/2+scrollPos*.25+"px");
 		});
 
 		$(window).scroll(function(){
 			scrollPos = $(window).scrollTop();
-			$(".greetingContainer").css("top",($(window).height())/2+scrollPos*.18+"px");
+			$(".greetingContainer").css("top",($(window).height())/2+scrollPos*.25+"px");
 
 			calcScroll = (scrollPos/scrollRange)*$(window).width();
 			$(".scroller").css("width",(calcScroll)+"px");
